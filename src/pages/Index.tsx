@@ -27,7 +27,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* SEO Meta Tags */}
-      <title>Mallareddy DTBU - Intelligent Campus Information System</title>
+      <title>Mallareddy Deemed To Be University</title>
       <meta 
         name="description" 
         content="AI-powered campus information system for Mallareddy Deemed To Be University. Get instant answers about academic schedules, facilities, dining services, and campus life." 
