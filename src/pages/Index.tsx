@@ -26,17 +26,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* SEO Meta Tags */}
-      <title>Mallareddy Deemed To Be University</title>
-      <meta 
-        name="description" 
-        content="AI-powered campus information system for Mallareddy Deemed To Be University. Get instant answers about academic schedules, facilities, dining services, and campus life." 
-      />
-      <meta 
-        name="keywords" 
-        content="Mallareddy University, campus information, AI assistant, student services, academic support, university facilities" 
-      />
-
       {/* Hero Section */}
       <HeroSection onOpenChatBot={openChatBot} />
 
