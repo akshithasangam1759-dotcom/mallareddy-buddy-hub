@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Bot, Sparkles, Users, BookOpen, MessageCircle } from 'lucide-react';
+import { Bot, Sparkles, Users, BookOpen, MessageCircle, GraduationCap } from 'lucide-react';
 import campusHeroImage from '@/assets/campus-hero.jpg';
 
 interface HeroSectionProps {
@@ -95,14 +96,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChatBot }) => {
               <MessageCircle className="w-6 h-6 mr-3" />
               Chat with MRU Assistant
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4 hover-scale backdrop-blur-sm"
-            >
-              <BookOpen className="w-6 h-6 mr-3" />
-              Explore Campus Services
-            </Button>
+            <Link to="/academic-support">
+              <Button 
+                size="lg"
+                variant="outline"
+                className="bg-white/10 border-white/30 text-white hover:bg-white/20 text-lg px-8 py-4 hover-scale backdrop-blur-sm"
+              >
+                <BookOpen className="w-6 h-6 mr-3" />
+                Explore Campus Services
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}
@@ -138,8 +141,5 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChatBot }) => {
     </section>
   );
 };
-
-// Adding the missing import
-import { GraduationCap } from 'lucide-react';
 
 export default HeroSection;

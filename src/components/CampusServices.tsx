@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -24,7 +25,8 @@ const CampusServices = () => {
       icon: GraduationCap,
       color: "bg-gradient-primary",
       features: ["Class Schedules", "Exam Timetables", "Grade Portal", "Academic Calendar"],
-      status: "Available 24/7"
+      status: "Available 24/7",
+      link: "/academic-support"
     },
     {
       title: "Library Resources",
@@ -32,7 +34,8 @@ const CampusServices = () => {
       icon: BookOpen,
       color: "bg-gradient-secondary",
       features: ["Digital Library", "Study Rooms", "Research Support", "Inter-library Loans"],
-      status: "Open 7AM-11PM"
+      status: "Open 7AM-11PM",
+      link: "/library"
     },
     {
       title: "Campus Navigation",
@@ -40,7 +43,8 @@ const CampusServices = () => {
       icon: MapPin,
       color: "bg-gradient-primary",
       features: ["Interactive Maps", "Room Finder", "Parking Info", "Accessibility Routes"],
-      status: "Real-time Updates"
+      status: "Real-time Updates",
+      link: "/campus-facilities"
     },
     {
       title: "Dining Services",
@@ -48,7 +52,8 @@ const CampusServices = () => {
       icon: Utensils,
       color: "bg-gradient-secondary",
       features: ["Main Cafeteria", "Food Court", "Coffee Shop", "Healthy Options"],
-      status: "7:30AM-9PM Daily"
+      status: "7:30AM-9PM Daily",
+      link: "/student-services"
     },
     {
       title: "Student Activities",
@@ -56,7 +61,8 @@ const CampusServices = () => {
       icon: Users,
       color: "bg-gradient-primary",
       features: ["Student Clubs", "Events Calendar", "Sports Facilities", "Cultural Programs"],
-      status: "Always Active"
+      status: "Always Active",
+      link: "/campus-facilities"
     },
     {
       title: "Wellness Center",
@@ -64,7 +70,8 @@ const CampusServices = () => {
       icon: Heart,
       color: "bg-gradient-secondary",
       features: ["Medical Clinic", "Counseling", "Fitness Center", "Mental Health Support"],
-      status: "9AM-6PM Mon-Fri"
+      status: "9AM-6PM Mon-Fri",
+      link: "/campus-facilities"
     }
   ];
 
@@ -112,9 +119,11 @@ const CampusServices = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full mt-4 bg-gradient-primary hover-scale" variant="default">
-                  Learn More
-                </Button>
+                <Link to={service.link}>
+                  <Button className="w-full mt-4 bg-gradient-primary hover-scale" variant="default">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -148,10 +157,12 @@ const CampusServices = () => {
                   <div className="text-sm text-muted-foreground">Study Seats</div>
                 </div>
               </div>
-              <Button className="bg-gradient-secondary hover-scale">
-                <BookOpen className="w-4 h-4 mr-2" />
-                Explore Library
-              </Button>
+              <Link to="/library">
+                <Button className="bg-gradient-secondary hover-scale">
+                  <BookOpen className="w-4 h-4 mr-2" />
+                  Explore Library
+                </Button>
+              </Link>
             </div>
           </div>
         </Card>
